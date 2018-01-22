@@ -11,7 +11,7 @@
         <gamepublisher>Nintendo</gamepublisher>
         <gamemode>Einzelspieler</gamemode>
         <gamegenre>Jump 'n' Run</gamegenre>
-        <eigenebewertung>4</eigenebewertung>
+        <eigenebewertung>6</eigenebewertung>
     </game>
     <game>
         <gamename>The Legend of Zelda: Link's Awakening</gamename>
@@ -20,7 +20,7 @@
         <gamepublisher>Nintendo</gamepublisher>
         <gamemode>Einzelspieler</gamemode>
         <gamegenre>Action-Adventure</gamegenre>
-        <eigenebewertung>4</eigenebewertung>
+        <eigenebewertung>7</eigenebewertung>
     </game>
     
     <!-- Sega Master System Games -->
@@ -31,7 +31,7 @@
         <gamepublisher>Sega</gamepublisher>
         <gamemode>Einzelspieler</gamemode>
         <gamegenre>Jump 'n' Run</gamegenre>
-        <eigenebewertung>2</eigenebewertung>
+        <eigenebewertung>4</eigenebewertung>
     </game>
     <game>
         <gamename>Prince of Persia</gamename>
@@ -40,7 +40,7 @@
         <gamepublisher>Brøderbund</gamepublisher>
         <gamemode>Einzelspieler</gamemode>
         <gamegenre>Jump 'n' Run</gamegenre>
-        <eigenebewertung>1</eigenebewertung>
+        <eigenebewertung>2</eigenebewertung>
     </game>
     
     <!-- Sega Mega Drive Games -->
@@ -51,7 +51,7 @@
         <gamepublisher>Sega</gamepublisher>
         <gamemode>Einzelspieler</gamemode>
         <gamegenre>Jump 'n' Run</gamegenre>
-        <eigenebewertung>5</eigenebewertung>
+        <eigenebewertung>8</eigenebewertung>
     </game>
     <game>
         <gamename>Cool Spot</gamename>
@@ -60,7 +60,7 @@
         <gamepublisher>Virgin Interactive</gamepublisher>
         <gamemode>Einzelspieler</gamemode>
         <gamegenre>Jump 'n' Run</gamegenre>
-        <eigenebewertung>5</eigenebewertung>
+        <eigenebewertung>7</eigenebewertung>
     </game>
     
     <!-- Sony PlayStation 2 Games -->
@@ -71,7 +71,7 @@
         <gamepublisher>Electronic Arts</gamepublisher>
         <gamemode>Einzelspieler, Mehrspieler</gamemode>
         <gamegenre>Rennspiel</gamegenre>
-        <eigenebewertung>4</eigenebewertung>
+        <eigenebewertung>8</eigenebewertung>
     </game>
     <game>
         <gamename>Burnout 3: Takedown</gamename>
@@ -80,7 +80,7 @@
         <gamepublisher>Electronic Arts</gamepublisher>
         <gamemode>Einzelspieler, Mehrspieler</gamemode>
         <gamegenre>Rennspiel</gamegenre>
-        <eigenebewertung>2</eigenebewertung>
+        <eigenebewertung>3</eigenebewertung>
     </game>
     
     <!-- Sony PlayStation 4 Games -->
@@ -91,7 +91,7 @@
         <gamepublisher>Namco Bandai Games</gamepublisher>
         <gamemode>Einzelspieler</gamemode>
         <gamegenre>Rollenspiel</gamegenre>
-        <eigenebewertung>5</eigenebewertung>
+        <eigenebewertung>9</eigenebewertung>
     </game>
     <game>
         <gamename>Horizon Zero Dawn</gamename>
@@ -100,6 +100,6 @@
         <gamepublisher>Guerilla Games</gamepublisher>
         <gamemode>Einzelspieler</gamemode>
         <gamegenre>Rollenspiel</gamegenre>
-        <eigenebewertung>7</eigenebewertung>
+        <eigenebewertung>10</eigenebewertung>
     </game>
 </games>
