@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT collection (console+) >
+    <!ELEMENT console (console_name, console_publisher, console_year, console_type)>
+        <!ATTLIST console
+          id ID #REQUIRED>
+    
+        <!ELEMENT console_name (#PCDATA)>
+        <!ELEMENT console_publisher (#PCDATA)>
+        <!ELEMENT console_year (#PCDATA)>
+        <!ELEMENT console_type (#PCDATA)>
+     

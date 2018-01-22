@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE games SYSTEM "games.dtd">
+
+<games>
+<!-- Games -->
+    <!-- GameBoy Games -->
+    <game>
+        <gamename>Super Mario Land</gamename>
+        <gameconsole>Gameboy</gameconsole>
+        <gameyear>1989</gameyear>
+        <gamepublisher>Nintendo</gamepublisher>
+        <gamemode>Einzelspieler</gamemode>
+        <gamegenre>Jump 'n' Run</gamegenre>
+        <eigenebewertung>4</eigenebewertung>
+    </game>
+    <game>
+        <gamename>The Legend of Zelda: Link's Awakening</gamename>
+        <gameconsole>Gameboy</gameconsole>
+        <gameyear>1993</gameyear>
+        <gamepublisher>Nintendo</gamepublisher>
+        <gamemode>Einzelspieler</gamemode>
+        <gamegenre>Action-Adventure</gamegenre>
+        <eigenebewertung>4</eigenebewertung>
+    </game>
+    
+    <!-- Sega Master System Games -->
+    <game>
+        <gamename>Alex Kidd in Miracle World</gamename>
+        <gameconsole>Sega Master System</gameconsole>
+        <gameyear>1986</gameyear>
+        <gamepublisher>Sega</gamepublisher>
+        <gamemode>Einzelspieler</gamemode>
+        <gamegenre>Jump 'n' Run</gamegenre>
+        <eigenebewertung>2</eigenebewertung>
+    </game>
+    <game>
+        <gamename>Prince of Persia</gamename>
+        <gameconsole>Sega Master System</gameconsole>
+        <gameyear>1991</gameyear>
+        <gamepublisher>Brøderbund</gamepublisher>
+        <gamemode>Einzelspieler</gamemode>
+        <gamegenre>Jump 'n' Run</gamegenre>
+        <eigenebewertung>1</eigenebewertung>
+    </game>
+    
+    <!-- Sega Mega Drive Games -->
+    <game>
+        <gamename>Sonic the Hedgehog</gamename>
+        <gameconsole>Sega Mega Drive</gameconsole>
+        <gameyear>1991</gameyear>
+        <gamepublisher>Sega</gamepublisher>
+        <gamemode>Einzelspieler</gamemode>
+        <gamegenre>Jump 'n' Run</gamegenre>
+        <eigenebewertung>5</eigenebewertung>
+    </game>
+    <game>
+        <gamename>Cool Spot</gamename>
+        <gameconsole>Sega Mega Drive</gameconsole>
+        <gameyear>1994</gameyear>
+        <gamepublisher>Virgin Interactive</gamepublisher>
+        <gamemode>Einzelspieler</gamemode>
+        <gamegenre>Jump 'n' Run</gamegenre>
+        <eigenebewertung>5</eigenebewertung>
+    </game>
+    
+    <!-- Sony PlayStation 2 Games -->
+    <game>
+        <gamename>Need for Speed Underground 2</gamename>
+        <gameconsole>Sony Playstation 2</gameconsole>
+        <gameyear>2004</gameyear>
+        <gamepublisher>Electronic Arts</gamepublisher>
+        <gamemode>Einzelspieler, Mehrspieler</gamemode>
+        <gamegenre>Rennspiel</gamegenre>
+        <eigenebewertung>4</eigenebewertung>
+    </game>
+    <game>
+        <gamename>Burnout 3: Takedown</gamename>
+        <gameconsole>Sony Playstation 2</gameconsole>
+        <gameyear>2004</gameyear>
+        <gamepublisher>Electronic Arts</gamepublisher>
+        <gamemode>Einzelspieler, Mehrspieler</gamemode>
+        <gamegenre>Rennspiel</gamegenre>
+        <eigenebewertung>2</eigenebewertung>
+    </game>
+    
+    <!-- Sony PlayStation 4 Games -->
+    <game>
+        <gamename>The Witcher 3: Wild Hunt</gamename>
+        <gameconsole>Sony Playstation 4</gameconsole>
+        <gameyear>2015</gameyear>
+        <gamepublisher>Namco Bandai Games</gamepublisher>
+        <gamemode>Einzelspieler</gamemode>
+        <gamegenre>Rollenspiel</gamegenre>
+        <eigenebewertung>5</eigenebewertung>
+    </game>
+    <game>
+        <gamename>Horizon Zero Dawn</gamename>
+        <gameconsole>Sony Playstation 4</gameconsole>
+        <gameyear>2017</gameyear>
+        <gamepublisher>Guerilla Games</gamepublisher>
+        <gamemode>Einzelspieler</gamemode>
+        <gamegenre>Rollenspiel</gamegenre>
+        <eigenebewertung>5</eigenebewertung>
+    </game>
+</games>

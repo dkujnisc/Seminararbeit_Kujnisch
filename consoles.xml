@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE collection SYSTEM "consoles.dtd">
+
+<collection>
+<!-- GameBoy -->
+<console id="gameboy">
+    <console_name>Gameboy</console_name>
+    <console_publisher>Nintendo</console_publisher>
+    <console_year>1989</console_year>
+    <console_type>Handheld-Konsole</console_type>
+</console>
+
+<!-- Sega Master System -->
+<console id="mastersystem">
+    <console_name>Sega Master System</console_name>
+    <console_publisher>Sega</console_publisher>
+    <console_year>1985</console_year>
+    <console_type>Stationäre Spielkonsole</console_type>
+</console>
+
+<!-- Sega Mega Drive -->
+<console id="megadrive">
+    <console_name>Sega Mega Drive</console_name>
+    <console_publisher>Sega</console_publisher>
+    <console_year>1988</console_year>
+    <console_type>Stationäre Spielkonsole</console_type>
+</console>
+
+<!-- Sony PlayStation 2 -->
+<console id="ps2">
+    <console_name>Sony PlayStation 2</console_name>
+    <console_publisher>Sony</console_publisher>
+    <console_year>2000</console_year>
+    <console_type>Stationäre Spielkonsole</console_type>
+</console>
+
+<!-- Sony PlayStation 4 -->
+<console id="ps4">
+    <console_name>Sony PlayStation 4</console_name>
+    <console_publisher>Sony</console_publisher>
+    <console_year>2013</console_year>
+    <console_type>Stationäre Spielkonsole</console_type>
+</console>    
+</collection>
