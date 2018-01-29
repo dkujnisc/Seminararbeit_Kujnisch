@@ -10,3 +10,13 @@ DISTFILES += \
     ../games.xml \
     ../consoles.dtd \
     ../games.dtd
+
+data.path = $$OUT_PWD/
+
+data.files += $$PWD/*.dat
+
+data.files += $$PWD/*.xml
+
+data.files += $$PWD/*.dtd
+
+INSTALLS += data
