@@ -2,7 +2,6 @@
 <!DOCTYPE games SYSTEM "games.dtd">
 
 <games>
-<!-- Games -->
     <!-- GameBoy Games -->
     <game>
         <gamename>Super Mario Land</gamename>
@@ -37,7 +36,7 @@
         <gamename>Prince of Persia</gamename>
         <gameconsole>Sega Master System</gameconsole>
         <gameyear>1991</gameyear>
-        <gamepublisher>Brøderbund</gamepublisher>
+        <gamepublisher>Broderbund</gamepublisher>
         <gamemode>Einzelspieler</gamemode>
         <gamegenre>Jump 'n' Run</gamegenre>
         <eigenebewertung>2</eigenebewertung>
