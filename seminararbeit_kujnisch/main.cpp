@@ -1,9 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <map>
-#include <list>
-
-#include <Console.h>
+#include <header.h>
 
 using namespace std;
 
@@ -14,10 +11,17 @@ int main()
     ifstream eingabe;
 
     eingabe.open("//Users//denise//Documents//1_Studium//Semester//5-Semester//2_Medieninfo//BM3//seminararbeit//Seminararbeit_Kujnisch//consoles.xml");
-    for (denise.zaehler=0,denise.zustand=0;;) {
-        eingabe.get(denise.zeichen);
+    char tempZeichen;
+    // erstes > wird ignoriert damit weitere verarbeitung leichter ist
+    for (;;){
+        eingabe.get(tempZeichen);
+        if ('>'==tempZeichen)
+            break;
+    }
+    for (;;) {
+        eingabe.get(console.zeichen);
         if (eingabe.eof()) break;
-        denise.parsezeichen();
+        console.parsezeichen();
     }
     eingabe.close();
 }
