@@ -23,4 +23,4 @@ data.files += $$PWD/*.dtd
 INSTALLS += data
 
 HEADERS += \
-    Console.h
+    header.h
