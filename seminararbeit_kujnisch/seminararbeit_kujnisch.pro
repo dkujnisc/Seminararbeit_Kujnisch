@@ -4,7 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    console.cpp
+    Console.cpp
 
 DISTFILES += \
     ../consoles.xml \
@@ -23,4 +23,4 @@ data.files += $$PWD/*.dtd
 INSTALLS += data
 
 HEADERS += \
-    console.h
+    Console.h
