@@ -2,7 +2,6 @@
 <!DOCTYPE collection SYSTEM "consoles.dtd">
 
 <collection>
-<!-- GameBoy -->
 <console>
     <console_name>Gameboy</console_name>
     <console_publisher>Nintendo</console_publisher>
@@ -10,7 +9,6 @@
     <console_type>Handheld-Konsole</console_type>
 </console>
 
-<!-- Sega Master System -->
 <console>
     <console_name>Sega Master System</console_name>
     <console_publisher>Sega</console_publisher>
@@ -18,7 +16,6 @@
     <console_type>Stationäre Spielkonsole</console_type>
 </console>
 
-<!-- Sega Mega Drive -->
 <console>
     <console_name>Sega Mega Drive</console_name>
     <console_publisher>Sega</console_publisher>
@@ -26,7 +23,6 @@
     <console_type>Stationäre Spielkonsole</console_type>
 </console>
 
-<!-- Sony PlayStation 2 -->
 <console>
     <console_name>Sony PlayStation 2</console_name>
     <console_publisher>Sony</console_publisher>
@@ -34,7 +30,6 @@
     <console_type>Stationäre Spielkonsole</console_type>
 </console>
 
-<!-- Sony PlayStation 4 -->
 <console>
     <console_name>Sony PlayStation 4</console_name>
     <console_publisher>Sony</console_publisher>
