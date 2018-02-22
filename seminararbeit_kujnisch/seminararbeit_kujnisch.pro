@@ -3,7 +3,8 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += main.cpp \
+    console.cpp
 
 DISTFILES += \
     ../consoles.xml \
@@ -20,3 +21,6 @@ data.files += $$PWD/*.xml
 data.files += $$PWD/*.dtd
 
 INSTALLS += data
+
+HEADERS += \
+    console.h
