@@ -26,6 +26,7 @@ class Console
            element = 3 : console_type
         */
         int parsezeichen();
+        Console getConsole();
     private:
         char puffer[100];
 } ;
