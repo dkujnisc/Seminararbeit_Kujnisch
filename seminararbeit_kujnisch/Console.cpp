@@ -3,6 +3,16 @@
 
 using namespace std;
 
+Console Console::getConsole(){
+    Console console;
+    console.console_name=console_name;
+    console.console_publisher=console_publisher;
+    console.console_type=console_type;
+    console.console_year=console_year;
+    element=0;
+    return console;
+}
+
 int Console::parsezeichen () {
     switch(zeichen) {
         case '>':
@@ -33,7 +43,8 @@ int Console::parsezeichen () {
                 console_type=puffer;
                 element++;
             }
-            cout << puffer <<endl;
+           cout << puffer << endl;
+           cout << "Element: " << element << endl;
             break;
         default:
            puffer[zaehler]=zeichen;
@@ -42,3 +53,5 @@ int Console::parsezeichen () {
     }
     return 0;
 }
+
+
