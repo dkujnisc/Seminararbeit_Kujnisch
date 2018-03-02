@@ -4,7 +4,8 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    Console.cpp
+    Console.cpp \
+    Game.cpp
 
 DISTFILES += \
     ../consoles.xml \

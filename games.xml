@@ -2,7 +2,6 @@
 <!DOCTYPE games SYSTEM "games.dtd">
 
 <games>
-    <!-- GameBoy Games -->
     <game>
         <gamename>Super Mario Land</gamename>
         <gameconsole>Gameboy</gameconsole>
@@ -21,8 +20,6 @@
         <gamegenre>Action-Adventure</gamegenre>
         <eigenebewertung>7</eigenebewertung>
     </game>
-    
-    <!-- Sega Master System Games -->
     <game>
         <gamename>Alex Kidd in Miracle World</gamename>
         <gameconsole>Sega Master System</gameconsole>
@@ -41,8 +38,6 @@
         <gamegenre>Jump 'n' Run</gamegenre>
         <eigenebewertung>2</eigenebewertung>
     </game>
-    
-    <!-- Sega Mega Drive Games -->
     <game>
         <gamename>Sonic the Hedgehog</gamename>
         <gameconsole>Sega Mega Drive</gameconsole>
@@ -61,8 +56,6 @@
         <gamegenre>Jump 'n' Run</gamegenre>
         <eigenebewertung>7</eigenebewertung>
     </game>
-    
-    <!-- Sony PlayStation 2 Games -->
     <game>
         <gamename>Need for Speed Underground 2</gamename>
         <gameconsole>Sony Playstation 2</gameconsole>
@@ -81,8 +74,6 @@
         <gamegenre>Rennspiel</gamegenre>
         <eigenebewertung>3</eigenebewertung>
     </game>
-    
-    <!-- Sony PlayStation 4 Games -->
     <game>
         <gamename>The Witcher 3: Wild Hunt</gamename>
         <gameconsole>Sony Playstation 4</gameconsole>
