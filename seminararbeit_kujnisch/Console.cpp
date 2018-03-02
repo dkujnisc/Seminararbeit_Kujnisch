@@ -21,30 +21,38 @@ int Console::parsezeichen () {
         if (4==krokodilcounter && -1==element) {
             element++;
             krokodilcounter=0;
+            start=true;
          }
-        if (2==krokodilcounter && -1!=element) {
+        else if (2==krokodilcounter && -1!=element) {
             element++;
             krokodilcounter=0;
+            start=true;
         }
         break;
 
         case '<':
-            puffer[zaehler]='\0';
-            if (0==element){
-                console_name=puffer;
+            if (start) {
+                puffer[zaehler]='\0';
+                if (0==element){
+                    cout << "Element: " << element << endl;
+                    console_name=puffer;
+                }
+                if (1==element){
+                    cout << "Element: " << element << endl;
+                    console_publisher=puffer;
+                }
+                if (2==element){
+                    cout << "Element: " << element << endl;
+                    console_year=puffer;
+                }
+                if (3==element){
+                    cout << "Element: " << element << endl;
+                    console_type=puffer;
+                    element++;
+                }
+               cout << puffer << endl;
+               start=false;
             }
-            if (1==element){
-                console_publisher=puffer;
-            }
-            if (2==element){
-                console_year=puffer;
-            }
-            if (3==element){
-                console_type=puffer;
-                element++;
-            }
-           cout << puffer << endl;
-           cout << "Element: " << element << endl;
             break;
         default:
            puffer[zaehler]=zeichen;

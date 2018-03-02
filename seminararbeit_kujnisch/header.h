@@ -12,7 +12,7 @@ class Console
         string console_year;
         string console_type;
 
-        bool start=true;
+        bool start=false;
 
         int krokodilcounter=0;
 

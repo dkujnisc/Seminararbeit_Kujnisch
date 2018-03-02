@@ -28,8 +28,8 @@ int main()
         if (4==console.element) {
             consoleList[consoleCounter]=console.getConsole();
             //cout << "eine neue Konsole wurde geschaffen" << endl;
-         //   cout << consoleList[consoleCounter].console_name << endl;
-           // cout << consoleList[consoleCounter].console_publisher << endl;
+            //cout << consoleList[consoleCounter].console_name << endl;
+            //cout << consoleList[consoleCounter].console_publisher << endl;
             //cout << consoleList[consoleCounter].console_type << endl;
             //cout << consoleList[consoleCounter].console_year << endl;
             consoleCounter++;
