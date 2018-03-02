@@ -9,7 +9,7 @@ Console Console::getConsole(){
     console.console_publisher=console_publisher;
     console.console_type=console_type;
     console.console_year=console_year;
-    element=0;
+    element=-1;
     return console;
 }
 
@@ -34,23 +34,22 @@ int Console::parsezeichen () {
             if (start) {
                 puffer[zaehler]='\0';
                 if (0==element){
-                    cout << "Element: " << element << endl;
                     console_name=puffer;
+                    //cout << "Console_Name: " << console_name << endl;
                 }
                 if (1==element){
-                    cout << "Element: " << element << endl;
                     console_publisher=puffer;
+                    //cout << "Console_Publisher: " << console_publisher << endl;
                 }
                 if (2==element){
-                    cout << "Element: " << element << endl;
                     console_year=puffer;
+                    //cout << "Console_Year: " << console_year << endl;
                 }
                 if (3==element){
-                    cout << "Element: " << element << endl;
                     console_type=puffer;
+                    //cout << "Console_Type: " << console_type << endl;
                     element++;
                 }
-               cout << puffer << endl;
                start=false;
             }
             break;
