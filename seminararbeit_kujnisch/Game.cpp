@@ -3,17 +3,20 @@
 
 using namespace std;
 
-Console Console::getConsole(){
-    Console console;
-    console.console_name=console_name;
-    console.console_publisher=console_publisher;
-    console.console_type=console_type;
-    console.console_year=console_year;
+Game Game::getGame(){
+    Game game;
+    game.gamename=gamename;
+    game.gameconsole=gameconsole;
+    game.gameyear=gameyear;
+    game.gamepublisher=gamepublisher;
+    game.gamemode=gamemode;
+    game.gamegenre=gamegenre;
+    game.eigenebewertung=eigenebewertung;
     element=-1;
-    return console;
+    return game;
 }
 
-int Console::parsezeichen () {
+int Game::parsezeichen () {
     switch(zeichen) {
         case '>':
         krokodilcounter++;
@@ -29,25 +32,29 @@ int Console::parsezeichen () {
             start=true;
         }
         break;
-
         case '<':
             if (start) {
                 puffer[zaehler]='\0';
                 if (0==element){
-                    console_name=puffer;
-                    //cout << "Console_Name: " << console_name << endl;
+                    gamename=puffer;
                 }
                 if (1==element){
-                    console_publisher=puffer;
-                    //cout << "Console_Publisher: " << console_publisher << endl;
+                    gameconsole=puffer;
                 }
                 if (2==element){
-                    console_year=puffer;
-                    //cout << "Console_Year: " << console_year << endl;
+                    gameyear=puffer;
                 }
                 if (3==element){
-                    console_type=puffer;
-                    //cout << "Console_Type: " << console_type << endl;
+                    gamepublisher=puffer;
+                }
+                if (4==element){
+                    gamemode=puffer;
+                }
+                if (5==element){
+                    gamegenre=puffer;
+                }
+                if (6==element){
+                    eigenebewertung=puffer;
                     element++;
                 }
                start=false;

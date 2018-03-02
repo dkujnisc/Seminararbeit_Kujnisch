@@ -36,4 +36,35 @@ int main()
         }
     }
     eingabe.close();
+
+    Game game;
+    Game gameList[100];
+    ifstream eingabeGames;
+    int gameCounter=0;
+
+    eingabeGames.open("//Users//denise//Documents//1_Studium//Semester//5-Semester//2_Medieninfo//BM3//seminararbeit//Seminararbeit_Kujnisch//games.xml");
+    for (;;){
+        eingabeGames.get(tempZeichen);
+        if ('>'==tempZeichen)
+            break;
+    }
+    for (;;) {
+        eingabeGames.get(game.zeichen);
+        if (eingabeGames.eof()) break;
+        game.parsezeichen();
+        //pruefung, ob element=4, wenn ja, dann wird naechste konsole befuellt
+        if (7==game.element) {
+            gameList[gameCounter]=game.getGame();
+            cout << "ein neues Game wurde geschaffen" << endl;
+            cout << gameList[gameCounter].gamename << endl;
+            cout << gameList[gameCounter].gameconsole << endl;
+            cout << gameList[gameCounter].gameyear << endl;
+            cout << gameList[gameCounter].gamepublisher << endl;
+            cout << gameList[gameCounter].gamemode << endl;
+            cout << gameList[gameCounter].gamegenre << endl;
+            cout << gameList[gameCounter].eigenebewertung << endl;
+            gameCounter++;
+        }
+    }
+    eingabeGames.close();
 }
