@@ -73,4 +73,9 @@ class Game
     private:
         char puffer[100];
 } ;
+class Menu
+{
+    public:
+        void startMenu();
+};
 #endif

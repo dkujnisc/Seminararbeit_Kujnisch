@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 int main()
 {
     Console console;
@@ -70,4 +69,6 @@ int main()
         }
     }
     eingabeGames.close();
+    Menu menu;
+    menu.startMenu();
 }
