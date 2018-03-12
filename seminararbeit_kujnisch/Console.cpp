@@ -5,7 +5,10 @@ using namespace std;
 
 Console Console::getConsole(){
     Console console;
+    console.id=id;
     console.console_name=console_name;
+    console.attribut1=attribut1;
+    console.attribut2=attribut2;
     console.console_publisher=console_publisher;
     console.console_type=console_type;
     console.console_year=console_year;
@@ -15,6 +18,29 @@ Console Console::getConsole(){
 
 int Console::parsezeichen () {
     switch(zeichen) {
+        case '\'':
+        // attributFlag hier initial = false
+        // negieren des bool-wertes attributFlag = true
+        attributFlag=!attributFlag;
+        if (attributFlag) {
+            zaehler=0;
+            attributcounter++;
+        } else {
+            puffer[zaehler]='\0';
+            if (0==attributcounter) {
+                id=puffer;
+            }
+            if (1==attributcounter) {
+                attribut1=puffer;
+            }
+            if (2==attributcounter) {
+                attribut2=puffer;
+                // zuruecksetzen auf initialzustand
+                attributcounter=-1;
+            }
+        }
+        break;
+
         case '>':
         krokodilcounter++;
         zaehler=0;

@@ -29,6 +29,9 @@ int main()
             consoleList[consoleCounter]=console.getConsole();
             cout << "eine neue Konsole wurde geschaffen" << endl;
             cout << consoleList[consoleCounter].console_name << endl;
+            cout << consoleList[consoleCounter].id << endl;
+            cout << consoleList[consoleCounter].attribut1 << endl;
+            cout << consoleList[consoleCounter].attribut2 << endl;
             cout << consoleList[consoleCounter].console_publisher << endl;
             cout << consoleList[consoleCounter].console_type << endl;
             cout << consoleList[consoleCounter].console_year << endl;

@@ -7,14 +7,19 @@ class Console
 {
     public:
 
+        string id;
+        string attribut1;
+        string attribut2;
         string console_name;
         string console_publisher;
         string console_year;
         string console_type;
 
         bool start=false;
+        bool attributFlag=false;
 
         int krokodilcounter=0;
+
 
         char zeichen;
         int zaehler=0;
@@ -24,6 +29,12 @@ class Console
            element = 1 : console_publisher
            element = 2 : console_year
            element = 3 : console_type
+        */
+        int attributcounter=-1;
+        /* dabei gilt:
+            attribut = 0 : id
+            attribut = 1 : attribut1
+            attribut = 2 : attribut2
         */
         int parsezeichen();
         Console getConsole();
