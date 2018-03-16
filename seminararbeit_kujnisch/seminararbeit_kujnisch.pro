@@ -6,7 +6,8 @@ CONFIG -= qt
 SOURCES += main.cpp \
     Console.cpp \
     Game.cpp \
-    Menu.cpp
+    Menu.cpp \
+    Search.cpp
 
 DISTFILES += \
     ../consoles.xml \

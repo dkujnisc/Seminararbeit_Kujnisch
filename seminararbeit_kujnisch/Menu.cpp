@@ -7,22 +7,19 @@ using namespace std;
 
 // kein rueckgabewert da menustart hier erfolgt
 void Menu::startMenu(){
-    cout << "menu1" << endl;
-    cout << "menu2" << endl;
-    cout << "menu3" << endl;
-    cout << "help" << endl;
+    cout << "(s)uchen" << endl;
+    cout << "(e)xportieren" << endl;
+    cout << "(h)ilfe" << endl;
 
-    int myNumber = 0;
     string input = "";
 
      while (true) {
        cout << "Please enter a valid number: ";
        getline(cin, input);
-
-       // This code converts from string to number safely.
-       stringstream myStream(input);
-       if (myStream >> myNumber) {
-           if (99==myNumber) {
+       cout << input << endl;
+       // benutzerEingabe aus getline command
+      // stringstream benutzerEingabe(input);
+       /*    if (99==myNumber) {
                break;
            }
            // menupunkt 1
@@ -37,10 +34,10 @@ void Menu::startMenu(){
            if (2==myNumber) {
                break;
            }
-       }
+           */
        cout << "Invalid number, please try again" << endl;
      }
-     cout << "You entered: " << myNumber << endl << endl;
+     //cout << "You entered: " << myNumber << endl << endl;
 
 
 }

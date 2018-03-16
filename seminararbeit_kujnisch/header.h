@@ -41,6 +41,7 @@ class Console
     private:
         char puffer[100];
 } ;
+
 class Game
 {
     public:
@@ -73,9 +74,18 @@ class Game
     private:
         char puffer[100];
 } ;
+
 class Menu
 {
     public:
         void startMenu();
 };
+
+class Search
+{
+    public:
+
+};
 #endif
+
+
