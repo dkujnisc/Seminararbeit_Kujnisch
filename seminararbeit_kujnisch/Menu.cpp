@@ -1,42 +1,40 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-#include "header.h"
 #include <cstring>
+#include "header.h"
 
 using namespace std;
 
 // kein rueckgabewert da menustart hier erfolgt
 void Menu::startMenu(Console consoleList[], Game gameList[]){
-    cout << "(s)uchen" << endl;
-    cout << "(e)xportieren" << endl;
-    cout << "(h)ilfe" << endl;
-
+    startMenuAusgabe();
     string input = "";
     // eingabe der menupunkte
+    // suche
     string menuEingabe_s= "s";
     string menuEingabe_suche= "suche";
-
+    // export
     string menuEingabe_e= "e";
     string menuEingabe_export= "export";
-
+    // hilfe
     string menuEingabe_h= "h";
     string menuEingabe_hilfe= "hilfe";
 
      while (true) {
-       cout << "Please enter a valid number: ";
        getline(cin, input);
-       cout << input << endl;
        // benutzerEingabe aus getline command
       // stringstream benutzerEingabe(input);
+           // suche
            if (0==strcmp(menuEingabe_s.c_str(), input.c_str()) || 0==strcmp(menuEingabe_suche.c_str(), input.c_str())) {
-               // hier kommt die suche hin
                suche(consoleList, gameList);
-               break;
+               cout << "Mist, wir sind zurueck im hauptmenu" << endl;
            }
+           // export
            if (0==strcmp(menuEingabe_e.c_str(), input.c_str()) || 0==strcmp(menuEingabe_export.c_str(), input.c_str())) {
                break;
            }
+           // hilfe
            if (0==strcmp(menuEingabe_h.c_str(), input.c_str()) || 0==strcmp(menuEingabe_hilfe.c_str(), input.c_str())) {
                break;
            }
@@ -44,46 +42,66 @@ void Menu::startMenu(Console consoleList[], Game gameList[]){
     }
 
 void Menu::suche(Console consoleList[], Game gameList[]){
-    cout << "(g)ames suchen" << endl;
-    cout << "(c)onsoles suchen" << endl;
-    cout << "(z)urueck" << endl;
-    cout << "(h)ilfe" << endl;
-
+    suchMenuAusgabe();
+    // erstellen der parameter
+    // suche
     string inputSuche = "";
     string gameSuche = "";
+    // game
     string menuEingabe_g= "g";
-    string menuEingabe_game= "games";
-
+    string menuEingabe_game= "game";
+    // console
     string menuEingabe_c= "c";
-    string menuEingabe_console= "consoles";
-
+    string menuEingabe_console= "console";
+    // zurueck
     string menuEingabe_z= "z";
     string menuEingabe_zurueck= "zurueck";
-
+    // hilfe
     string menuEingabe_h= "h";
     string menuEingabe_hilfe= "hilfe";
 
     while (true) {
       getline(cin, inputSuche);
+           // suche nach
+          // game
           if (0==strcmp(menuEingabe_g.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_game.c_str(), inputSuche.c_str())) {
+              cout << "Gib einen Suchnamen ein! Achtung: case sensitive!" << endl;
               getline(cin, gameSuche);
-              for(unsigned i = 1; i <= (sizeof(Game)/sizeof(*gameList)); i++) {
-                  if(0==strcmp(gameSuche.c_str(), gameList[i].eigenebewertung.c_str())){
+              for(unsigned i = 1; i <= (sizeof(Game)/sizeof(gameList)); i++) {
+                   if (std::string::npos!=gameList[i].gamename.find(gameSuche)) {
                           cout << gameList[i].gamename << endl;
+                   }
               }
-              }
-              break;
+              suchMenuAusgabe();
           }
+          // console
           if (0==strcmp(menuEingabe_c.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_console.c_str(), inputSuche.c_str())) {
               break;
           }
+          // zurueck
           if (0==strcmp(menuEingabe_z.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_zurueck.c_str(), inputSuche.c_str())) {
               break;
           }
+          // hilfe
           if (0==strcmp(menuEingabe_h.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_hilfe.c_str(), inputSuche.c_str())) {
               break;
           }
+    }
+    }
 
-      cout << "Invalid number, please try again" << endl;
-    }
-    }
+void Menu::suchMenuAusgabe(){
+    cout << "------------------------------------" << endl;
+    cout << "Wonach moechtest du suchen?" << endl;
+    cout << "(g)ames suchen" << endl;
+    cout << "(c)onsoles suchen" << endl;
+    cout << "(z)urueck" << endl;
+    cout << "(h)ilfe" << endl;
+}
+
+void Menu::startMenuAusgabe(){
+    cout << "------------------------------------" << endl;
+    cout << "Was moechtest du machen?" << endl;
+    cout << "(s)uche" << endl;
+    cout << "(e)xport" << endl;
+    cout << "(h)ilfe" << endl;
+}

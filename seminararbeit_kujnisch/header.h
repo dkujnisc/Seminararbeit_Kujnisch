@@ -80,6 +80,8 @@ class Menu
     public:
         void startMenu(Console consoleList[], Game gameList[]);
         void suche(Console consoleList[], Game gameList[]);
+        void suchMenuAusgabe();
+        void startMenuAusgabe();
 };
 
 class Search
