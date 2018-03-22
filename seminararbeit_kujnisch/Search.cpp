@@ -1,1 +1,0 @@
-//if (myStream >> myNumber) {

@@ -78,7 +78,8 @@ class Game
 class Menu
 {
     public:
-        void startMenu();
+        void startMenu(Console consoleList[], Game gameList[]);
+        void suche(Console consoleList[], Game gameList[]);
 };
 
 class Search

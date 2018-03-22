@@ -7,6 +7,7 @@ using namespace std;
 int main()
 {
     Console console;
+    // uebergabeparameter der suche
     Console consoleList[100];
     ifstream eingabe;
     int consoleCounter=0;
@@ -70,5 +71,5 @@ int main()
     }
     eingabeGames.close();
     Menu menu;
-    menu.startMenu();
+    menu.startMenu(consoleList, gameList);
 }
