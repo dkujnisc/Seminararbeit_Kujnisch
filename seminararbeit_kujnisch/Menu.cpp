@@ -67,10 +67,16 @@ void Menu::suche(Console consoleList[], Game gameList[]){
           if (0==strcmp(menuEingabe_g.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_game.c_str(), inputSuche.c_str())) {
               cout << "Gib einen Suchnamen ein! Achtung: case sensitive!" << endl;
               getline(cin, gameSuche);
+              cout << "nach folgendem Begriff wird gesucht: \'" +gameSuche + "\'" << endl;
+              bool nixGefunden=true;
               for(unsigned i = 1; i <= (sizeof(Game)/sizeof(gameList)); i++) {
                    if (std::string::npos!=gameList[i].gamename.find(gameSuche)) {
                           cout << gameList[i].gamename << endl;
+                        nixGefunden=false;
                    }
+              }
+              if (nixGefunden) {
+                  cout << "Leider nix gefunden." << endl;
               }
               suchMenuAusgabe();
           }
