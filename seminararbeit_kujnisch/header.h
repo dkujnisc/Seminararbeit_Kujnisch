@@ -82,13 +82,9 @@ class Menu
         void suche(Console consoleList[], Game gameList[]);
         void suchMenuAusgabe();
         void startMenuAusgabe();
+        void convert(Console consoleList[], Game gameList[]);
 };
 
-class Search
-{
-    public:
-
-};
 #endif
 
 

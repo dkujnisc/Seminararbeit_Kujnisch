@@ -3,7 +3,6 @@
 #include <sstream>
 #include <cstring>
 #include <fstream>
-#include <chrono>
 #include "header.h"
 
 using namespace std;
@@ -37,31 +36,22 @@ void Menu::startMenu(Console consoleList[], Game gameList[]){
            }
            // export
            if (0==strcmp(menuEingabe_e.c_str(), input.c_str()) || 0==strcmp(menuEingabe_export.c_str(), input.c_str())) {
-                 //cout << "Gib einen Exportdateinamen ein!" << endl;
-                 //string dateiName = "";
-                 //getline(cin, dateiName);
-                 //cout << "Deine Datei wird unter folgendem Pfad gespeichert: //Users//denise//Dokumente//" + dateiName + ".xml" << endl;
-
-               // quelle: https://stackoverflow.com/questions/19555121/how-to-get-current-timestamp-in-milliseconds-since-1970-just-the-way-java-gets
-               // timestamp für exportdateien
-               std::chrono::milliseconds ms = std::chrono::duration_cast< std::chrono::milliseconds >(
-                    std::chrono::system_clock::now().time_since_epoch());
+                 cout << "Gib einen Exportdateinamen ein!" << endl;
+                 string dateiName = "";
+                 getline(cin, dateiName);
+                 cout << "Deine Datei wird unter folgendem Pfad gespeichert: /Users/denise/Documents/" + dateiName + ".xml" << endl;
                ofstream filestr;
-               //filestr.open ("//Users//denise//Dokumente//export" + std::to_string(ms.count()) + ".xml");
-
-               // quelle: https://stackoverflow.com/questions/31860405/how-to-concatenate-a-string-with-chronomilliseconds
-               // unwandlung ms in string
-               filestr.open ("//Users//denise//Documents//export" + std::to_string(ms.count()) + ".xml");
+               filestr.open ("//Users//denise//Documents//" + dateiName + ".xml");
                std::streambuf *coutbuf = std::cout.rdbuf();
                cout.rdbuf(filestr.rdbuf());
-               cout << "Wir sind einfach die Aller Aller Aller GEILSTEN!";
+               convert(consoleList, gameList);
                // wiederherstellung des alten coutbuf
                std::cout.rdbuf(coutbuf);
                // zum abschliessen der datei; aehnlich wie speichern
                filestr.close();
                cout << "------------------------------------" << endl;
                cout << "Export war erfolgreich" << endl;
-               cout << "Folgende Datei wurde geschrieben://Users//denise//Documents//export" + std::to_string(ms.count()) + ".xml" << endl;
+               cout << "Folgende Datei wurde geschrieben://Users//denise//Documents//" + dateiName + ".xml" << endl;
                cout << "------------------------------------" << endl;
                startMenuAusgabe();
            }
@@ -149,12 +139,13 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                         getline(cin, gameSuche);
                         cout << "Es wird nach folgendem Namen in Games gesucht: \'" +gameSuche + "\'" << endl;
                         bool nixGefunden=true;
-                        for(unsigned i = 1; i <= (sizeof(Game)/sizeof(gameList)); i++) {
+                        for(unsigned i = 0; i <= (sizeof(Game)/sizeof(gameList)); i++) {
                              if (std::string::npos!=gameList[i].gamename.find(gameSuche)) {
                                     cout << gameList[i].gamename << endl;
                                   nixGefunden=false;
                              }
                         }
+                        //sizeof(array) / sizeof(array[0])
                         if (nixGefunden) {
                             cout << "------------------------------------" << endl;
                             cout << "Leider nix gefunden." << endl;
@@ -167,7 +158,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                         getline(cin, gameSuche);
                         cout << "Es wird nach folgendem Begriff in Games-Konsolen gesucht: \'" +gameSuche + "\'" << endl;
                         bool nixGefunden=true;
-                        for(unsigned i = 1; i <= (sizeof(Game)/sizeof(gameList)); i++) {
+                        for(unsigned i = 0; i <= (sizeof(Game)/sizeof(gameList)); i++) {
                              if (std::string::npos!=gameList[i].gameconsole.find(gameSuche)) {
                                     cout << gameList[i].gamename + ", " + gameList[i].gameconsole<< endl;
                                   nixGefunden=false;
@@ -185,7 +176,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                         getline(cin, gameSuche);
                         cout << "Es wird nach folgendem Jahr in Games gesucht: \'" +gameSuche + "\'" << endl;
                         bool nixGefunden=true;
-                        for(unsigned i = 1; i <= (sizeof(Game)/sizeof(gameList)); i++) {
+                        for(unsigned i = 0; i <= (sizeof(Game)/sizeof(gameList)); i++) {
                              if (std::string::npos!=gameList[i].gameyear.find(gameSuche)) {
                                     cout << gameList[i].gamename + ", " + gameList[i].gameyear << endl;
                                   nixGefunden=false;
@@ -203,7 +194,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                         getline(cin, gameSuche);
                         cout << "Es wird nach folgendem Begriff in Games gesucht: \'" +gameSuche + "\'" << endl;
                         bool nixGefunden=true;
-                        for(unsigned i = 1; i <= (sizeof(Game)/sizeof(gameList)); i++) {
+                        for(unsigned i = 0; i <= (sizeof(Game)/sizeof(gameList)); i++) {
                              if (std::string::npos!=gameList[i].gamepublisher.find(gameSuche)) {
                                     cout << gameList[i].gamename + ", " + gameList[i].gamepublisher << endl;
                                   nixGefunden=false;
@@ -221,7 +212,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                         getline(cin, gameSuche);
                         cout << "Es wird nach folgendem Begriff in Games gesucht: \'" +gameSuche + "\'" << endl;
                         bool nixGefunden=true;
-                        for(unsigned i = 1; i <= (sizeof(Game)/sizeof(gameList)); i++) {
+                        for(unsigned i = 0; i <= (sizeof(Game)/sizeof(gameList)); i++) {
                              if (std::string::npos!=gameList[i].gamemode.find(gameSuche)) {
                                     cout << gameList[i].gamename + ", " + gameList[i].gamemode << endl;
                                   nixGefunden=false;
@@ -239,7 +230,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                         getline(cin, gameSuche);
                         cout << "Es wird nach folgendem Begriff in Games gesucht: \'" +gameSuche + "\'" << endl;
                         bool nixGefunden=true;
-                        for(unsigned i = 1; i <= (sizeof(Game)/sizeof(gameList)); i++) {
+                        for(unsigned i = 0; i <= (sizeof(Game)/sizeof(gameList)); i++) {
                              if (std::string::npos!=gameList[i].gamegenre.find(gameSuche)) {
                                     cout << gameList[i].gamename + ", " + gameList[i].gamegenre << endl;
                                   nixGefunden=false;
@@ -258,7 +249,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                         getline(cin, gameSuche);
                         cout << "Es wird nach folgendem Begriff in Games gesucht: \'" +gameSuche + "\'" << endl;
                         bool nixGefunden=true;
-                        for(unsigned i = 1; i <= (sizeof(Game)/sizeof(gameList)); i++) {
+                        for(unsigned i = 0; i <= (sizeof(Game)/sizeof(gameList)); i++) {
                              if (std::string::npos!=gameList[i].eigenebewertung.find(gameSuche)) {
                                     cout << gameList[i].gamename + ", " + gameList[i].eigenebewertung << endl;
                                   nixGefunden=false;
@@ -292,7 +283,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
               getline(cin, consoleSuche);
               cout << "Es wird nach folgendem Begriff in Konsolen gesucht: \'" + consoleSuche + "\'" << endl;
               bool nixGefunden=true;
-              for(unsigned i = 1; i <= (sizeof(Console)/sizeof(consoleList)); i++) {
+              for(unsigned i = 0; i <= (sizeof(Console)/sizeof(consoleList)); i++) {
                    if (std::string::npos!=consoleList[i].console_name.find(consoleSuche)) {
                           cout << consoleList[i].console_name << endl;
                         nixGefunden=false;
@@ -319,6 +310,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
     }
     }
 
+// suchmenu
 void Menu::suchMenuAusgabe(){
     cout << "------------------------------------" << endl;
     cout << "Wonach moechtest du suchen?" << endl;
@@ -329,12 +321,45 @@ void Menu::suchMenuAusgabe(){
     cout << "------------------------------------" << endl;
 }
 
+// startmenu
 void Menu::startMenuAusgabe(){
     cout << "------------------------------------" << endl;
     cout << "Was moechtest du machen?" << endl;
     cout << "(s)uche" << endl;
-    cout << "(e)xport" << endl;
+    cout << "(e)xport to converted xml file" << endl;
     cout << "(h)ilfe" << endl;
     cout << "(b)eenden" << endl;
     cout << "------------------------------------" << endl;
+}
+
+// konvertieren
+// vorgabe des xml-ausgabeformats
+void Menu::convert(Console consoleList[], Game gameList[]){
+    cout << "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" << endl;
+    cout << "<collection>" << endl;
+    for (unsigned i = 0; i <= (sizeof(Console)/sizeof(consoleList)); i++) {
+        if (consoleList[i].console_name.empty()) {
+            break;
+        }
+        cout << "   <console id=\"" + consoleList[i].id + "\">" << endl;
+        cout << "       <console_name attribut1=\"" + consoleList[i].attribut1 + "\" attribut2=\"" + consoleList[i].attribut2 + "\">" + consoleList[i].console_name + "</console_name>" << endl;
+        cout << "       <console_publisher>" + consoleList[i].console_publisher + "</console_publisher>" << endl;
+        cout << "       <console_year>" + consoleList[i].console_year + "</console_year>" << endl;
+        cout << "       <console_type>" + consoleList[i].console_type + "</console_type>" << endl;
+        //
+        for(unsigned j = 0; j <= (sizeof(Game)/sizeof(gameList)); j++) {
+             if (0==strcmp(consoleList[i].console_name.c_str(), gameList[j].gameconsole.c_str())) {
+                    cout << "    <game>" << endl;
+                    cout << "        <gamename>" + gameList[j].gamename + "</gamename>" << endl;
+                    cout << "        <gameyear>" + gameList[j].gameyear + "</gameyear>" << endl;
+                    cout << "        <gamepublisher>" + gameList[j].gamepublisher + "</gamepublisher>" << endl;
+                    cout << "        <gamemode>" + gameList[j].gamemode + "</gamemode>" << endl;
+                    cout << "        <gamegenre>" + gameList[j].gamegenre + "</gamegenre>" << endl;
+                    cout << "        <eigenebewertung>" + gameList[j].eigenebewertung + "</eigenebewertung>" << endl;
+                    cout << "    </game>" << endl;
+             }
+        }
+        cout << "   </console>" << endl;
+    }
+    cout << "</collection>" << endl;
 }
