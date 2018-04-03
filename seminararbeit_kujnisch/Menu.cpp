@@ -278,37 +278,80 @@ void Menu::suche(Console consoleList[], Game gameList[]){
           }
           // console
           if (0==strcmp(menuEingabe_c.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_console.c_str(), inputSuche.c_str())) {
-              cout << "Du hast Konsolen ausgewaehlt. Gib einen Suchbegriff für eine Konsole ein!" << endl;
-              cout << "Achtung: case sensitive!" << endl;
-              getline(cin, consoleSuche);
-              cout << "Es wird nach folgendem Begriff in Konsolen gesucht: \'" + consoleSuche + "\'" << endl;
-              bool nixGefunden=true;
-              for(unsigned i = 0; i <= (sizeof(Console)/sizeof(consoleList)); i++) {
-                   if (std::string::npos!=consoleList[i].console_name.find(consoleSuche)) {
-                          cout << consoleList[i].console_name << endl;
-                        nixGefunden=false;
-                   }
+              cout << "here we are" << endl;
+
+              // deklarieren der vergleichsparameter
+              // name
+              string menuEingabe_n = "n";
+              string menuEingabe_name = "name";
+              // publisher
+              string menuEingabe_p = "p";
+              string menuEingabe_publisher = "publisher";
+              // type
+              string menuEingabe_t = "t";
+              string menuEingabe_type = "type";
+              // year
+              string menuEingabe_y = "y";
+              string menuEingabe_year = "year";
+
+              while (true) {
+                  cout << "Du hast Konsolen ausgewaehlt. Bitte waehle zwischen folgenden Kategorien:" << endl;
+                  cout << "(n)ame" << endl;
+                  cout << "(p)ublisher" << endl;
+                  cout << "(t)ype" << endl;
+                  cout << "(y)ear" << endl;
+                  cout << "(z)urueck" << endl;
+                  cout << "(h)ilfe" << endl;
+
+                  getline(cin, inputSuche);
+                  if (0==strcmp(menuEingabe_n.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_name.c_str(), inputSuche.c_str())) {
+                      cout << "Gib einen Suchnamen fuer eine Konsole ein!" << endl;
+                      cout << "Achtung: case sensitive!" << endl;
+                      cout << "------------------------------------" << endl;
+                      getline(cin, consoleSuche);
+                      cout << "Es wird nach folgendem Namen in Konsolen gesucht: \'" +consoleSuche + "\'" << endl;
+                      bool nixGefunden=true;
+                      for(unsigned i = 0; i <= (sizeof(Console)/sizeof(consoleList)); i++) {
+                           if (std::string::npos!=consoleList[i].console_name.find(consoleSuche)) {
+                                  cout << consoleList[i].console_name << endl;
+                                nixGefunden=false;
+                           }
+                      }
+                      //sizeof(array) / sizeof(array[0])
+                      if (nixGefunden) {
+                          cout << "------------------------------------" << endl;
+                          cout << "Leider nix gefunden." << endl;
+                      }
+                  }
+                  // zurueck
+                  if (0==strcmp(menuEingabe_z.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_zurueck.c_str(), inputSuche.c_str())) {
+                      break;
+                  }
+                  // hilfe
+                  if (0==strcmp(menuEingabe_h.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_hilfe.c_str(), inputSuche.c_str())) {
+                      cout << "------------------------------------" << endl;
+                      cout << "Gib den in Klammern stehenden Buchstaben oder das Wort an!" << endl;
+                      cout << "Beispiel: (n)ame suchen" << endl;
+                      cout << "Hier gibst Du n oder name ein." << endl;
+                      cout << "------------------------------------" << endl;
+                  }
               }
-              if (nixGefunden) {
-                  cout << "------------------------------------" << endl;
-                  cout << "Leider nix gefunden." << endl;
-              }
-              suchMenuAusgabe();
           }
-          // zurueck
-          if (0==strcmp(menuEingabe_z.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_zurueck.c_str(), inputSuche.c_str())) {
-              break;
-          }
-          // hilfe
-          if (0==strcmp(menuEingabe_h.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_hilfe.c_str(), inputSuche.c_str())) {
-              cout << "------------------------------------" << endl;
-              cout << "Gib den in Klammern stehenden Buchstaben oder das Wort an!" << endl;
-              cout << "Beispiel: (g)ames suchen" << endl;
-              cout << "Hier gibst Du g oder games ein." << endl;
-              cout << "------------------------------------" << endl;
-          }
+            // zurueck
+            if (0==strcmp(menuEingabe_z.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_zurueck.c_str(), inputSuche.c_str())) {
+                break;
+            }
+            // hilfe
+            if (0==strcmp(menuEingabe_h.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_hilfe.c_str(), inputSuche.c_str())) {
+                cout << "------------------------------------" << endl;
+                cout << "Gib den in Klammern stehenden Buchstaben oder das Wort an!" << endl;
+                cout << "Beispiel: (g)ames suchen" << endl;
+                cout << "Hier gibst Du g oder games ein." << endl;
+                cout << "------------------------------------" << endl;
+            }
+            suchMenuAusgabe();
     }
-    }
+}
 
 // suchmenu
 void Menu::suchMenuAusgabe(){
@@ -346,7 +389,6 @@ void Menu::convert(Console consoleList[], Game gameList[]){
         cout << "       <console_publisher>" + consoleList[i].console_publisher + "</console_publisher>" << endl;
         cout << "       <console_year>" + consoleList[i].console_year + "</console_year>" << endl;
         cout << "       <console_type>" + consoleList[i].console_type + "</console_type>" << endl;
-        //
         for(unsigned j = 0; j <= (sizeof(Game)/sizeof(gameList)); j++) {
              if (0==strcmp(consoleList[i].console_name.c_str(), gameList[j].gameconsole.c_str())) {
                     cout << "    <game>" << endl;
