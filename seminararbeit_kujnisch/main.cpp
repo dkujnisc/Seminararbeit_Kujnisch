@@ -27,14 +27,14 @@ int main()
         //pruefung, ob element=4, wenn ja, dann wird naechste konsole befuellt
         if (4==console.element) {
             consoleList[consoleCounter]=console.getConsole();
-            cout << "eine neue Konsole wurde geschaffen" << endl;
-            cout << consoleList[consoleCounter].console_name << endl;
-            cout << consoleList[consoleCounter].id << endl;
-            cout << consoleList[consoleCounter].attribut1 << endl;
-            cout << consoleList[consoleCounter].attribut2 << endl;
-            cout << consoleList[consoleCounter].console_publisher << endl;
-            cout << consoleList[consoleCounter].console_type << endl;
-            cout << consoleList[consoleCounter].console_year << endl;
+            // cout << "eine neue Konsole wurde geschaffen" << endl;
+           // cout << consoleList[consoleCounter].console_name << endl;
+           // cout << consoleList[consoleCounter].id << endl;
+           // cout << consoleList[consoleCounter].attribut1 << endl;
+            //cout << consoleList[consoleCounter].attribut2 << endl;
+           // cout << consoleList[consoleCounter].console_publisher << endl;
+           // cout << consoleList[consoleCounter].console_type << endl;
+           // cout << consoleList[consoleCounter].console_year << endl;
             consoleCounter++;
         }
     }
@@ -58,14 +58,14 @@ int main()
         //pruefung, ob element=4, wenn ja, dann wird naechste konsole befuellt
         if (7==game.element) {
             gameList[gameCounter]=game.getGame();
-            cout << "ein neues Game wurde geschaffen" << endl;
-            cout << gameList[gameCounter].gamename << endl;
-            cout << gameList[gameCounter].gameconsole << endl;
-            cout << gameList[gameCounter].gameyear << endl;
-            cout << gameList[gameCounter].gamepublisher << endl;
-            cout << gameList[gameCounter].gamemode << endl;
-            cout << gameList[gameCounter].gamegenre << endl;
-            cout << gameList[gameCounter].eigenebewertung << endl;
+          //  cout << "ein neues Game wurde geschaffen" << endl;
+           // cout << gameList[gameCounter].gamename << endl;
+           // cout << gameList[gameCounter].gameconsole << endl;
+           // cout << gameList[gameCounter].gameyear << endl;
+           // cout << gameList[gameCounter].gamepublisher << endl;
+           // cout << gameList[gameCounter].gamemode << endl;
+           // cout << gameList[gameCounter].gamegenre << endl;
+           // cout << gameList[gameCounter].eigenebewertung << endl;
             gameCounter++;
         }
     }

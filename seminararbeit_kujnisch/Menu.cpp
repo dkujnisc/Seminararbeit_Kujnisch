@@ -36,12 +36,17 @@ void Menu::startMenu(Console consoleList[], Game gameList[]){
            }
            // export
            if (0==strcmp(menuEingabe_e.c_str(), input.c_str()) || 0==strcmp(menuEingabe_export.c_str(), input.c_str())) {
-                 cout << "Gib einen Exportdateinamen ein!" << endl;
+               cout << "Gib einen vollqualifizierten Dateinamen an!" << endl;
+               cout << "Verzeichnisse muessen bereits existieren; es werden keine neuen Verzeichnisse angelegt!" << endl;
+               cout << "Beispiel:/Users/denise/Documents/dateiName.xml" << endl;
                  string dateiName = "";
                  getline(cin, dateiName);
-                 cout << "Deine Datei wird unter folgendem Pfad gespeichert: /Users/denise/Documents/" + dateiName + ".xml" << endl;
+                 cout << "------------------------------------" << endl;
+                 cout << "Deine Datei wird unter folgendem Pfad gespeichert: " + dateiName << endl;
+                 cout << "------------------------------------" << endl;
                ofstream filestr;
-               filestr.open ("//Users//denise//Documents//" + dateiName + ".xml");
+               //filestr.open ("//Users//denise//Documents//" + dateiName + ".xml");
+               filestr.open(dateiName);
                std::streambuf *coutbuf = std::cout.rdbuf();
                cout.rdbuf(filestr.rdbuf());
                convert(consoleList, gameList);
@@ -50,9 +55,7 @@ void Menu::startMenu(Console consoleList[], Game gameList[]){
                // zum abschliessen der datei; aehnlich wie speichern
                filestr.close();
                cout << "------------------------------------" << endl;
-               cout << "Export war erfolgreich" << endl;
-               cout << "Folgende Datei wurde geschrieben://Users//denise//Documents//" + dateiName + ".xml" << endl;
-               cout << "------------------------------------" << endl;
+               cout << "Folgende Datei wurde versucht zu schreiben:" + dateiName << endl;
                startMenuAusgabe();
            }
            // hilfe
@@ -120,6 +123,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
               string menuEingabe_e= "e";
               string menuEingabe_eigenebewertung = "eigenebewertung";
               while (true) {
+                  cout << "------------------------------------" << endl;
                   cout << "Du hast Games ausgewaehlt. Bitte waehle zwischen folgenden Kategorien:" << endl;
                   cout << "(n)ame" << endl;
                   cout << "(c)onsole" << endl;
@@ -130,6 +134,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                   cout << "(e)igenebewertung" << endl;
                   cout << "(z)urueck" << endl;
                   cout << "(h)ilfe" << endl;
+                  cout << "------------------------------------" << endl;
 
                   getline(cin, inputSuche);
                     if (0==strcmp(menuEingabe_n.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_name.c_str(), inputSuche.c_str())) {
@@ -278,7 +283,6 @@ void Menu::suche(Console consoleList[], Game gameList[]){
           }
           // console
           if (0==strcmp(menuEingabe_c.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_console.c_str(), inputSuche.c_str())) {
-              cout << "here we are" << endl;
 
               // deklarieren der vergleichsparameter
               // name
@@ -295,6 +299,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
               string menuEingabe_year = "year";
 
               while (true) {
+                  cout << "------------------------------------" << endl;
                   cout << "Du hast Konsolen ausgewaehlt. Bitte waehle zwischen folgenden Kategorien:" << endl;
                   cout << "(n)ame" << endl;
                   cout << "(p)ublisher" << endl;
@@ -302,10 +307,12 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                   cout << "(y)ear" << endl;
                   cout << "(z)urueck" << endl;
                   cout << "(h)ilfe" << endl;
+                  cout << "------------------------------------" << endl;
 
                   getline(cin, inputSuche);
                   // suche nach name
                   if (0==strcmp(menuEingabe_n.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_name.c_str(), inputSuche.c_str())) {
+                      cout << "------------------------------------" << endl;
                       cout << "Gib einen Suchnamen fuer eine Konsole ein!" << endl;
                       cout << "Achtung: case sensitive!" << endl;
                       cout << "------------------------------------" << endl;
@@ -325,6 +332,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                   }
                   // suche nach publisher
                   if (0==strcmp(menuEingabe_p.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_publisher.c_str(), inputSuche.c_str())) {
+                      cout << "------------------------------------" << endl;
                       cout << "Gib einen Suchnamen fuer einen Publisher ein!" << endl;
                       cout << "Achtung: case sensitive!" << endl;
                       cout << "------------------------------------" << endl;
@@ -344,6 +352,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                   }
                   // suche nach type
                   if (0==strcmp(menuEingabe_t.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_type.c_str(), inputSuche.c_str())) {
+                      cout << "------------------------------------" << endl;
                       cout << "Gib einen Suchnamen fuer einen Konsolentyp ein!" << endl;
                       cout << "Achtung: case sensitive!" << endl;
                       cout << "------------------------------------" << endl;
@@ -363,6 +372,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                   }
                   // suche nach year
                   if (0==strcmp(menuEingabe_y.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_year.c_str(), inputSuche.c_str())) {
+                      cout << "------------------------------------" << endl;
                       cout << "Gib eine Jahreszahl fuer eine Konsole ein!" << endl;
                       cout << "------------------------------------" << endl;
                       getline(cin, consoleSuche);
