@@ -304,6 +304,7 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                   cout << "(h)ilfe" << endl;
 
                   getline(cin, inputSuche);
+                  // suche nach name
                   if (0==strcmp(menuEingabe_n.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_name.c_str(), inputSuche.c_str())) {
                       cout << "Gib einen Suchnamen fuer eine Konsole ein!" << endl;
                       cout << "Achtung: case sensitive!" << endl;
@@ -317,7 +318,62 @@ void Menu::suche(Console consoleList[], Game gameList[]){
                                 nixGefunden=false;
                            }
                       }
-                      //sizeof(array) / sizeof(array[0])
+                      if (nixGefunden) {
+                          cout << "------------------------------------" << endl;
+                          cout << "Leider nix gefunden." << endl;
+                      }
+                  }
+                  // suche nach publisher
+                  if (0==strcmp(menuEingabe_p.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_publisher.c_str(), inputSuche.c_str())) {
+                      cout << "Gib einen Suchnamen fuer einen Publisher ein!" << endl;
+                      cout << "Achtung: case sensitive!" << endl;
+                      cout << "------------------------------------" << endl;
+                      getline(cin, consoleSuche);
+                      cout << "Es wird nach folgendem Namen in Publisher gesucht: \'" +consoleSuche + "\'" << endl;
+                      bool nixGefunden=true;
+                      for(unsigned i = 0; i <= (sizeof(Console)/sizeof(consoleList)); i++) {
+                           if (std::string::npos!=consoleList[i].console_publisher.find(consoleSuche)) {
+                                  cout << consoleList[i].console_publisher + ", " + consoleList[i].console_name << endl;
+                                nixGefunden=false;
+                           }
+                      }
+                      if (nixGefunden) {
+                          cout << "------------------------------------" << endl;
+                          cout << "Leider nix gefunden." << endl;
+                      }
+                  }
+                  // suche nach type
+                  if (0==strcmp(menuEingabe_t.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_type.c_str(), inputSuche.c_str())) {
+                      cout << "Gib einen Suchnamen fuer einen Konsolentyp ein!" << endl;
+                      cout << "Achtung: case sensitive!" << endl;
+                      cout << "------------------------------------" << endl;
+                      getline(cin, consoleSuche);
+                      cout << "Es wird nach folgendem Namen in Typ gesucht: \'" +consoleSuche + "\'" << endl;
+                      bool nixGefunden=true;
+                      for(unsigned i = 0; i <= (sizeof(Console)/sizeof(consoleList)); i++) {
+                           if (std::string::npos!=consoleList[i].console_type.find(consoleSuche)) {
+                                  cout << consoleList[i].console_type + ", " + consoleList[i].console_name << endl;
+                                nixGefunden=false;
+                           }
+                      }
+                      if (nixGefunden) {
+                          cout << "------------------------------------" << endl;
+                          cout << "Leider nix gefunden." << endl;
+                      }
+                  }
+                  // suche nach year
+                  if (0==strcmp(menuEingabe_y.c_str(), inputSuche.c_str()) || 0==strcmp(menuEingabe_year.c_str(), inputSuche.c_str())) {
+                      cout << "Gib eine Jahreszahl fuer eine Konsole ein!" << endl;
+                      cout << "------------------------------------" << endl;
+                      getline(cin, consoleSuche);
+                      cout << "Es wird nach folgendem Jahr in Konsolen gesucht: \'" +consoleSuche + "\'" << endl;
+                      bool nixGefunden=true;
+                      for(unsigned i = 0; i <= (sizeof(Console)/sizeof(consoleList)); i++) {
+                           if (std::string::npos!=consoleList[i].console_year.find(consoleSuche)) {
+                                  cout << consoleList[i].console_year + ", " + consoleList[i].console_name << endl;
+                                nixGefunden=false;
+                           }
+                      }
                       if (nixGefunden) {
                           cout << "------------------------------------" << endl;
                           cout << "Leider nix gefunden." << endl;
