@@ -15,7 +15,7 @@ int main()
     //eingabe.open("//Users//denise//Documents//1_Studium//Semester//5-Semester//2_Medieninfo//BM3//seminararbeit//Seminararbeit_Kujnisch//consoles.xml");
     eingabe.open("consoles.xml");
     char tempZeichen;
-    // erstes > wird ignoriert damit weitere verarbeitung leichter ist
+    // for-schleife ueberspringt erstes >, da danach Aufbau immer gleich ist
     for (;;){
         eingabe.get(tempZeichen);
         if ('>'==tempZeichen)
@@ -48,6 +48,7 @@ int main()
 
     //eingabeGames.open("//Users//denise//Documents//1_Studium//Semester//5-Semester//2_Medieninfo//BM3//seminararbeit//Seminararbeit_Kujnisch//games.xml");
     eingabeGames.open("games.xml");
+    // for-schleife ueberspringt erstes >, da danach Aufbau immer gleich ist
     for (;;){
         eingabeGames.get(tempZeichen);
         if ('>'==tempZeichen)
